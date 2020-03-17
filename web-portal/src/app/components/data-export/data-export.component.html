@@ -1,0 +1,36 @@
+<div>
+  <ul class="list-inline mb-0">
+    <li class="list-inline-item">
+      <button
+        class="btn btn-primary btn-sm"
+        (click)="exportExcelFile('AU')"
+        [disabled]="fetchingData"
+      >
+        <i class="fas fa-file-download"></i>
+        Download for AU
+      </button>
+    </li>
+    <li class="list-inline-item">
+      <button
+        class="btn btn-primary btn-sm"
+        (click)="exportExcelFile('US')"
+        [disabled]="fetchingData"
+      >
+        <i class="fas fa-file-download"></i>
+        Download for US
+      </button>
+    </li>
+    <li class="list-inline-item">
+      <div *ngIf="fetchingData">
+        <div class="spinner-border spinner-border-sm" role="status"></div>
+        Fetching your data. Please wait
+      </div>
+      <div *ngIf="!fetchingData && error != null">
+        <div class="text-danger">{{error}}</div>
+      </div>
+    </li>
+  </ul>
+  <div style="font-size: 14px;">
+    Export metrics data by sport selection
+  </div>
+</div>
