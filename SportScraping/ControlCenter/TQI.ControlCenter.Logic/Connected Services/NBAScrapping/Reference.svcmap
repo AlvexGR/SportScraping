@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ee519d5d-4feb-45db-80a0-8aad66fa4eed" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:1503/NBAScrapping/service" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="f3bef8a5-dba2-4984-99d5-f23bc0d600d1" SourceId="1" SourceUrl="http://localhost:1503/NBAScrapping/service?xsd=xsd0" />
+    <MetadataFile FileName="NBAScrapingContract.wsdl" MetadataType="Wsdl" ID="ecc264a5-1ac8-44ed-bb0f-e80385380aac" SourceId="1" SourceUrl="http://localhost:1503/NBAScrapping/service?wsdl" />
+    <MetadataFile FileName="service.disco" MetadataType="Disco" ID="138516a3-fe28-4e46-a099-8b71a52f6c77" SourceId="1" SourceUrl="http://localhost:1503/NBAScrapping/service?disco" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="0fe96395-3999-4dc1-8e4a-83124906af9b" SourceId="1" SourceUrl="http://localhost:1503/NBAScrapping/service?wsdl=wsdl0" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="ff950313-9e9d-4d30-9e87-c689ce327b1b" SourceId="1" SourceUrl="http://localhost:1503/NBAScrapping/service?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
