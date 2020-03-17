@@ -1,0 +1,2 @@
+﻿- Open normal Command Prompt as Administrator
+- Navigate to this folder and run install/uninstall.bat

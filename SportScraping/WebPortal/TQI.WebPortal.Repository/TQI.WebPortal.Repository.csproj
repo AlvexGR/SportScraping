@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Threading.Analyzers" Version="16.5.132" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Infrastructure\TQI.Infrastructure.Entity\TQI.Infrastructure.Entity.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\TQI.Infrastructure.Utility\TQI.Infrastructure.Utility.csproj" />
+  </ItemGroup>
+</Project>
