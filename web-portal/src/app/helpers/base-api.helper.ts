@@ -10,7 +10,7 @@ export class BaseApiHelper {
   //static baseUrl = "https://localhost:44326/api"; // Local
   //static baseUrl = "http://192.168.1.10:1503/api"; // Home
   //static baseUrl = "http://192.168.101.117:1503/api" // IMT
-  static baseUrl = "http://localhost:57775/api" // server
+  static baseUrl = "http://localhost:57775/api" // Local
 
   constructor(private _http: HttpClient) {}
 
