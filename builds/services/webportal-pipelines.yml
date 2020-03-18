@@ -1,0 +1,43 @@
+# ASP.NET Core
+# Build and test ASP.NET Core projects targeting .NET Core.
+# Add steps that run tests, create a NuGet package, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
+
+trigger:
+- master
+
+name: 'WebPortalService'
+
+pool:
+  vmImage: 'vs2017-win2016'
+
+steps:
+
+- task: DotNetCoreCLI@2
+  displayName: 'Restore package'
+  inputs:
+    command: 'restore'
+    projects: 'SportScraping/WebPortal/**/*.csproj'
+    feedsToUse: 'select'
+
+- task: DotNetCoreCLI@2
+  displayName: 'Build'
+  inputs:
+    command: 'build'
+    projects: 'SportScraping/WebPortal/TQI.WebPortal.API/**/*.csproj'
+
+- task: DotNetCoreCLI@2
+  displayName: 'Publish'
+  inputs:
+    command: 'publish'
+    publishWebProjects: false
+    projects: 'SportScraping/WebPortal/TQI.WebPortal.API/TQI.WebPortal.API.csproj'
+    arguments: '--output $(Build.ArtifactStagingDirectory)/WebPortal-Service'
+    zipAfterPublish: true
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish artifact'
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)/WebPortal-Service'
+    ArtifactName: 'WebPortal-Service'
+    publishLocation: 'Container'
